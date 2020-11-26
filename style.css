@@ -7,7 +7,7 @@ main {
 }
 .button-wrap {
     display: grid;
-    /* 한 줄에 4개씩, 모두 동일한 비율 적용(1:1:1:1) */
+    /* Four per line, all equal ratios (1:1:1:1) */
     grid-template-columns: repeat(4, 1fr);
 }
 input, button {
@@ -27,19 +27,19 @@ button {
     border: 1px solid #454448;
     font-size: 2rem;
 }
-/* nth-child(4n+2): 4번째 요소마다 스타일을 적용하는데 처음에만 두번째에 적용 */
+/* nth-child (4n+2): Applies style to each fourth element but only to the second */
 button:nth-child(4n+2), button:last-child  {
-    background-color: orange;
+    background-color: black;
 }
 button:hover {    
     opacity: .5;
 }
 .ac {
-    /* 첫 번째 선부터 4번째 선까지 지정 */
+    /* Specify from first to fourth lines */
     grid-column: 1/4;
     background: #6A6A6C;
 }
 .zero {
-    /* 첫 번째 선부터 3번째 선까지 지정 */
+    /* Specify from first line to third line */
     grid-column: 1/3;
 }
